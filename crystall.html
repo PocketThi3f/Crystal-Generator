@@ -34,34 +34,51 @@
 					$(document).ready(
 						function() {
 
-							var guessValue = 60;
+							function rNG() {
+
+								var rNG = (Math.random() * 100) + 1;
+
+
+							}
+
 							var countUp = 0;
-							var rNG = [15, 10];
+
 
 							$("#numberGen").text(guessValue);
 
-							for (var i = 0; i < rNG.length; i++) {
+							for (var i = 1; i <= 12; i++) {
 								
 								var crystalLine = $('<img>');
-								crystalLine.attr('data-val', rNG[i]);
-								crystalLine.attr('src', 
+								crystalLine.attr('data-val', rNG);
+								crystalLine.attr(
+									'src', 
+
 									'file:///C:/Users/GaraanSK/week-4-game/assets/images/cc9566b877fb24b579c30d4bdbaaa627.jpg'
 								);
+
+								crystalLine.attr(
+									'src', 
+
+									'file:///C:/Users/GaraanSK/week-4-game/assets/images/galaxy-opal-640x533.jpg'
+								);	
+
 								crystalLine.attr('alt', 'fabGems');
 								crystalLine.addClass('powerGem');
-								$('#gemArea').append('crystalLine');
+								$('#gemArea').append(crystalLine);
 
 							}
 
 							$('.powerGem').on('click', function() {
 
-								countUp = countUp + parseInt($(this).data('hidden'));
+								countUp = countUp + parseInt($(this).data('val'));
 
-								$('goalNumber').text(countUp);
+								$('#goalNumber').text(countUp);
 
 								if (countUp == guessValue) {
 
 									alert("Winner, winner! Chicken Dinner.");
+
+
 
 								} 
 
@@ -69,17 +86,13 @@
 
 									alert('Whisper: The cake is a LIE. Try again!');
 
+									return;
+
 								}
 
 							});
 
-
 						});
-
-
-
-
-
 
 				</script>
 	
