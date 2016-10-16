@@ -4,53 +4,74 @@
 
 			<meta charset="UTF-8">
 				<title>Making A FORTUNE!</title>
+				<style type="text/css">
+					
+				.powerGem {
+
+					width: 300px;
+					height: 300px;
+
+				}
+
+
+				</style>
 		</head>
 
 			<body>
 
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col-sm-6">
-
+		
 			<p>Match this number: <span id="numberGen"></span></p>
 				
-				</div>
 
-				<div class="col-sm-6">
-
-			<p>Current Score: <span id="goalNumber"></span></p>
-
-				</div>
-
-			</div>
-
-		</div>	
+			<p>Current Score: <span id="goalNumber">0</span></p>
+	
 		
-			<div class="gemArea"></div>
+			<div id="gemArea"></div>
 
+				<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 				<script type="text/javascript">
 					
-					$(document).ready( 
+					$(document).ready(
 						function() {
 
-							var guessValue = "";
-							var rNG = [];
+							var guessValue = 60;
 							var countUp = 0;
+							var rNG = [15, 10];
 
 							$("#numberGen").text(guessValue);
 
-							for (var i = 0; i <= 100; i++) {
+							for (var i = 0; i < rNG.length; i++) {
 								
 								var crystalLine = $('<img>');
-								crystalLine.attr('ramval, i');
-								crystalLine.attr('src', 'file:///C:/Users/GaraanSK/week-4-game/assets/images/cc9566b877fb24b579c30d4bdbaaa627.jpg');
-								crystalLine.attr('alt', 'fab gems');
-								crystalLine.addClass('powerGem')
-								$('gemArea').append('')
+								crystalLine.attr('data-val', rNG[i]);
+								crystalLine.attr('src', 
+									'file:///C:/Users/GaraanSK/week-4-game/assets/images/cc9566b877fb24b579c30d4bdbaaa627.jpg'
+								);
+								crystalLine.attr('alt', 'fabGems');
+								crystalLine.addClass('powerGem');
+								$('#gemArea').append('crystalLine');
 
 							}
+
+							$('.powerGem').on('click', function() {
+
+								countUp = countUp + parseInt($(this).data('hidden'));
+
+								$('goalNumber').text(countUp);
+
+								if (countUp == guessValue) {
+
+									alert("Winner, winner! Chicken Dinner.");
+
+								} 
+
+								else if (countUp > guessValue) {
+
+									alert('Whisper: The cake is a LIE. Try again!');
+
+								}
+
+							});
 
 
 						});
