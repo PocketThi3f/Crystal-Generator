@@ -1,3 +1,34 @@
+var myGameCharacters = [
+    $('<div id="hairyPotter" class="character"></div>').data({
+        health: 150,
+        name: 'Harry Potter',
+        attack: 100
+    }),
+    $('<div id="profSnape" class="character"></div>').data({
+        health: 100,
+        name: 'Professor Snape',
+        attack: 455
+    }),
+    $('<div id="lordVold" class="character"></div>').data({
+        health: 50,
+        name: 'Frodo',
+        attack: 5
+    })
+    $('<div id="albyDumble" class="character"></div>').data({
+        health: 50,
+        name: 'Frodo',
+        attack: 5
+    })
+];
+$.each(myGameCharacters, function(character) {
+    // append each one to you game board?
+});
+
+
+
+
+
+
 $('.characterContainer').on('click', function () {
        if ($(this).hasClass('lukeContainer')) {
             $('#chosenone').append(lukeBox);
@@ -28,43 +59,3 @@ for (var i = 0; i < letters.length; i++) {
     //etc
 ];
 
-
-var myGameCharacters = [
-    $('#gimli.character').data({
-        health: 150,
-        name: 'Gimli',
-        attack: 100
-    }),
-    $('#arwen.character').data({
-        health: 100,
-        name: 'Arwen',
-        attack: 455
-    }),
-    $('#frodo.character').data({
-        health: 50,
-        name: 'Frodo',
-        attack: 5
-    })
-];
-
-
-var myGameCharacters = [
-    $('<div id="gimli" class="character"></div>').data({
-        health: 150,
-        name: 'Gimli',
-        attack: 100
-    }),
-    $('<div id="arwen" class="character"></div>').data({
-        health: 100,
-        name: 'Arwen',
-        attack: 455
-    }),
-    $('<div id="frodo" class="character"></div>').data({
-        health: 50,
-        name: 'Frodo',
-        attack: 5
-    })
-];
-$.each(myGameCharacters, function(character) {
-    // append each one to you game board?
-});
