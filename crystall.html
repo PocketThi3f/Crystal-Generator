@@ -19,6 +19,13 @@
 
 			<body>
 
+			<div id="stats">
+
+			<p>Wins: </p>
+
+			<p>Losses: </p>
+			
+			</div>
 		
 			<p>Match this number: <span id="numberGen"></span></p>
 				
@@ -26,10 +33,21 @@
 			<p>Current Score: <span id="goalNumber">0</span></p>
 	
 		
-			<div id="gemArea"></div>
+			<div id="imagery1"></div>
+
+			<div id="imagery2"></div>
+
+			<div id="imagery3"></div>
+
+			<div id="imagery4"></div>
+
+			<div id="imagery5"></div>
 
 				<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 				<script type="text/javascript">
+
+				var guessValue = [];
+				
 					
 					$(document).ready(
 						function() {
@@ -37,7 +55,7 @@
 							function rNG() {
 
 								var rNG = (Math.random() * 100) + 1;
-
+								$('')
 
 							}
 
@@ -46,22 +64,10 @@
 
 							$("#numberGen").text(guessValue);
 
-							for (var i = 1; i <= 12; i++) {
-								
+							for (var i = 0; i <= rNG.length; i++) {
+						
 								var crystalLine = $('<img>');
 								crystalLine.attr('data-val', rNG);
-								crystalLine.attr(
-									'src', 
-
-									'file:///C:/Users/GaraanSK/week-4-game/assets/images/cc9566b877fb24b579c30d4bdbaaa627.jpg'
-								);
-
-								crystalLine.attr(
-									'src', 
-
-									'file:///C:/Users/GaraanSK/week-4-game/assets/images/galaxy-opal-640x533.jpg'
-								);	
-
 								crystalLine.attr('alt', 'fabGems');
 								crystalLine.addClass('powerGem');
 								$('#gemArea').append(crystalLine);
@@ -77,16 +83,16 @@
 								if (countUp == guessValue) {
 
 									alert("Winner, winner! Chicken Dinner.");
-
-
+									wins++;
+									rNG();
 
 								} 
 
 								else if (countUp > guessValue) {
 
 									alert('Whisper: The cake is a LIE. Try again!');
-
-									return;
+									losses++;
+									rNG();
 
 								}
 
