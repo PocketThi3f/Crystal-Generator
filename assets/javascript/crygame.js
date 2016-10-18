@@ -1,16 +1,17 @@
 var wins = 0;
 var losses = 0;
-
-rNg();		
+var countUp = 0;
+var guessValue = "";
 					
 $(document).ready(function() {
 
-	function rNG() {
+	function creation() {
 
-		var rNG = Math.floor(Math.random() * 12) + 1;
-			// testing area for number generator
-			console.log(Math.floor(Math.random() * 12) + 1);
-			$('<img>').append(rNG);			
+		var rNG = Math.floor(Math.random() * 13) + 1;
+			$('#imagery1').append(rNG);
+			$('#imagery2').append(rNG);
+			$('#imagery3').append(rNG);
+			$('#imagery4').append(rNG);		
 		}
 
 		$("#numberGen").text(matchedNum);
@@ -18,9 +19,9 @@ $(document).ready(function() {
 			for (var i = 0; i <= rNG.length; i++) {
 						
 				var gemClass = $('<img>').addClass('powerGem');
-					crystalLine.attr('data-val');
-						crystalLine.attr('alt', 'fabGems');
-							$('#gemArea').append(crystalLine);
+					gemClass.attr('data-val', rNG.length);
+						gemClass.attr('alt', 'fabGems');
+							$('.powerGem').append(gemClass);
 
 			}
 
@@ -34,7 +35,7 @@ $(document).ready(function() {
 
 						alert("Winner, winner! Chicken Dinner.");
 						wins++;
-						rNG();
+						creation();
 
 					} 
 
@@ -42,7 +43,7 @@ $(document).ready(function() {
 
 						alert('Whisper: The cake is a LIE. Try again!');
 						losses++;
-						rNG();
+						creation();
 
 					}
 
