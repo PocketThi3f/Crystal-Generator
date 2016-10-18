@@ -8,17 +8,16 @@ $(document).ready(function() {
 	function rNG() {
 
 		var rNG = Math.floor(Math.random() * 12) + 1;
-							
+			// testing area for number generator
+			console.log(Math.floor(Math.random() * 12) + 1);
+			$('<img>').append(rNG);			
 		}
 
-		var countUp = 0;
-
-
-		$("#numberGen").text(guessValue);
+		$("#numberGen").text(matchedNum);
 
 			for (var i = 0; i <= rNG.length; i++) {
 						
-				var crystalLine = $('<img>');
+				var gemClass = $('<img>').addClass('powerGem');
 					crystalLine.attr('data-val');
 						crystalLine.attr('alt', 'fabGems');
 							$('#gemArea').append(crystalLine);
