@@ -1,8 +1,7 @@
 var wins = 0;
 var losses = 0;
-var guessValue = [];
 
-rNg();				
+rNg();		
 					
 						$(document).ready( function() {
 
@@ -19,7 +18,7 @@ rNg();
 							for (var i = 0; i <= rNG.length; i++) {
 						
 								var crystalLine = $('<img>');
-								crystalLine.attr('data-val', rNG);
+								crystalLine.attr('data-val');
 								crystalLine.attr('alt', 'fabGems');
 								$('#gemArea').append(crystalLine);
 
