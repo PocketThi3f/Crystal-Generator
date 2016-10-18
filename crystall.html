@@ -4,103 +4,39 @@
 
 			<meta charset="UTF-8">
 				<title>Making A FORTUNE!</title>
-				<style type="text/css">
-					
-				.powerGem {
+					<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+					<link rel="stylesheet" type="text/css" href="assets/css/crystyle.css">
 
-					width: 300px;
-					height: 300px;
-
-				}
-
-
-				</style>
 		</head>
-
-			<body>
+		<body>
 
 			<div id="stats">
 
-			<p>Wins: </p>
+				<p>Wins: </p>
 
-			<p>Losses: </p>
+				<p>Losses: </p>
 			
 			</div>
 		
-			<p>Match this number: <span id="numberGen"></span></p>
+				<p>Match this number: <span id="numberGen"></span></p>
 				
 
-			<p>Current Score: <span id="goalNumber">0</span></p>
+				<p>Current Score: <span id="goalNumber">0</span></p>
 	
-		
-			<div id="imagery1"></div>
+			<div class="powerGem">
 
-			<div id="imagery2"></div>
+				<div id="imagery1" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/cc9566b877fb24b579c30d4bdbaaa627.jpg"></div>
 
-			<div id="imagery3"></div>
+				<div id="imagery2" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/galaxy-opal-640x533.jpg"></div>
 
-			<div id="imagery4"></div>
+				<div id="imagery3" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/MeatStone_Taiwan.JPG"></div>
 
-			<div id="imagery5"></div>
+				<div id="imagery4" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/eca81abed2a09fb1708c6c294a346a4a.jpg"></div>
+			
 
-				<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-				<script type="text/javascript">
-
-				var guessValue = [];
-				
-					
-					$(document).ready(
-						function() {
-
-							function rNG() {
-
-								var rNG = (Math.random() * 100) + 1;
-								$('')
-
-							}
-
-							var countUp = 0;
-
-
-							$("#numberGen").text(guessValue);
-
-							for (var i = 0; i <= rNG.length; i++) {
-						
-								var crystalLine = $('<img>');
-								crystalLine.attr('data-val', rNG);
-								crystalLine.attr('alt', 'fabGems');
-								crystalLine.addClass('powerGem');
-								$('#gemArea').append(crystalLine);
-
-							}
-
-							$('.powerGem').on('click', function() {
-
-								countUp = countUp + parseInt($(this).data('val'));
-
-								$('#goalNumber').text(countUp);
-
-								if (countUp == guessValue) {
-
-									alert("Winner, winner! Chicken Dinner.");
-									wins++;
-									rNG();
-
-								} 
-
-								else if (countUp > guessValue) {
-
-									alert('Whisper: The cake is a LIE. Try again!');
-									losses++;
-									rNG();
-
-								}
-
-							});
-
-						});
-
-				</script>
+				<script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+				<script type="text/javascript" src="assets/javascript/crygame.js"></script>
+			</div>	
 	
-			</body>
+		</body>
 	</html>

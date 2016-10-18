@@ -1,26 +1,28 @@
-var myGameCharacters = [
+var myPotterPals = [
+
     $('<div id="hairyPotter" class="character"></div>').data({
         health: 150,
         name: 'Harry Potter',
-        attack: 100
+        attack: 10
     }),
     $('<div id="profSnape" class="character"></div>').data({
-        health: 100,
+        health: 160,
         name: 'Professor Snape',
-        attack: 455
+        attack: 10
     }),
     $('<div id="lordVold" class="character"></div>').data({
-        health: 50,
-        name: 'Frodo',
-        attack: 5
+        health: 200,
+        name: 'Voldemort',
+        attack: 10
     })
     $('<div id="albyDumble" class="character"></div>').data({
-        health: 50,
-        name: 'Frodo',
-        attack: 5
+        health: 200,
+        name: 'Albus',
+        attack: 10
     })
+
 ];
-$.each(myGameCharacters, function(character) {
+$.each(myPotterPals, function(character) {
     // append each one to you game board?
 });
 
