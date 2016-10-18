@@ -23,7 +23,12 @@ var myPotterPals = [
 
 ];
 $.each(myPotterPals, function(character) {
-    // append each one to you game board?
+    
+
+
+
+
+
 });
 
 
@@ -38,7 +43,7 @@ $('.characterContainer').on('click', function () {
             $('#char').empty();
 
 
-            // store the value
+// store the value
 $('.enemy').data('health', 140);
 
 // update the value
