@@ -29,18 +29,6 @@ $.each(myPotterPals, function(character) {
 
 });
 
-
-
-
-
-
-$('.characterContainer').on('click', function () {
-       if ($(this).hasClass('lukeContainer')) {
-            $('#chosenone').append(lukeBox);
-            $('#enemies').append(maulBox,jodaBox,kiloBox);
-            $('#char').empty();
-
-
 // store the value
 $('.enemy').data('health', 140);
 
@@ -52,15 +40,8 @@ $('.enemy').data('health', someNewValue);
 var enemyHealth = $('.enemy').data('health');
 
 
-for (var i = 0; i < letters.length; i++) {
-                var b = $('<button>');
-                b.addClass('letter-button letter letter-button-color');
-                b.data('woohoo', letters[i]);
-
-
-                var characterStats = [
-    new Character('Gimli', 150, 10, 15),
-    new Character('Arwen', 100, 10, 15)
-    //etc
-];
-
+$('.characterContainer').on('click', function () {
+       if ($(this).hasClass('lukeContainer')) {
+            $('#chosenone').append(lukeBox);
+            $('#enemies').append(maulBox,jodaBox,kiloBox);
+            $('#char').empty();

@@ -28,19 +28,17 @@ $(document).ready(function() {
 
         		// $('#goalNumber').text(countUp);
 
-				// 	if (countUp == guessValue) {
+				// 	if (countUp == numberGen) {
 
 				// 		alert("Winner, winner! Chicken Dinner.");
 				// 		wins++;
-				// 		creation();
 
 				// 	} 
 
-				// 	else (countUp > guessValue) {
+				// 	else (countUp > numberGen) {
 
 				// 		alert('Whisper: The cake is a LIE. Try again!');
 				// 		losses++;
-				// 		creation();
 
 					// });
 
