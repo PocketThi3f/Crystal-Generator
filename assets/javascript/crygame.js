@@ -1,52 +1,57 @@
-var wins = 0;
-var losses = 0;
-var countUp = 0;
-var guessValue = "";
+$(document).ready(function() { 
+
+   // 		    $('#numberGen').load(function() {
+                    
+   //  			var matchedNum = [];
+
+   //      			for (var i=19, t=120; i<t; i++) {
+
+   //          		matchedNum.push(Math.floor(Math.random() * 10) + 1)
+
+			// 			console.log(matchedNum);		
+
+   //      		}
+
 					
-$(document).ready(function() {
+			// });
 
-	function creation() {
+            $('.powerGem').on('click', function() {
+                    
+    			var ranNum = [];
 
-		var rNG = Math.floor(Math.random() * 13) + 1;
-			$('#imagery1').append(rNG);
-			$('#imagery2').append(rNG);
-			$('#imagery3').append(rNG);
-			$('#imagery4').append(rNG);		
-		}
+        			for (var i=0, t=1; i<t; i++) {
 
-		$("#numberGen").text(matchedNum);
+            		ranNum.push(Math.round(Math.random() * 11) + 1);
 
-			for (var i = 0; i <= rNG.length; i++) {
-						
-				var gemClass = $('<img>').addClass('powerGem');
-					gemClass.attr('data-val', rNG.length);
-						gemClass.attr('alt', 'fabGems');
-							$('.powerGem').append(gemClass);
+            		$('#goalNumber').html('<span> ' + ranNum + '</span>');
 
-			}
+        		}
 
-				$('.powerGem').on('click', function() {
+					console.log(ranNum);
+			});
 
-					countUp = countUp + parseInt($(this).data('val'));
 
-				$('#goalNumber').text(countUp);
+			
+                    
 
-					if (countUp == guessValue) {
+				// $('#goalNumber').text(countUp);
 
-						alert("Winner, winner! Chicken Dinner.");
-						wins++;
-						creation();
+				// 	if (countUp == guessValue) {
 
-					} 
+				// 		alert("Winner, winner! Chicken Dinner.");
+				// 		wins++;
+				// 		creation();
 
-					else (countUp > guessValue) {
+				// 	} 
 
-						alert('Whisper: The cake is a LIE. Try again!');
-						losses++;
-						creation();
+				// 	else (countUp > guessValue) {
 
-					}
+				// 		alert('Whisper: The cake is a LIE. Try again!');
+				// 		losses++;
+				// 		creation();
 
-				});
+					// });
+
+				// });
 
 });

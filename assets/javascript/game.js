@@ -22,11 +22,9 @@ var myPotterPals = [
     })
 
 ];
+
 $.each(myPotterPals, function(character) {
     
-
-
-
 
 
 });
