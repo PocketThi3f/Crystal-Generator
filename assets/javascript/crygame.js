@@ -11,6 +11,11 @@ var galaxyOpal = Math.floor((Math.random() * 12) + 1);
 var porkGem = Math.floor((Math.random() * 12) + 1);
 var cabbageGem = Math.floor((Math.random() * 12) + 1);
 
+//Testing for randomized value only. Please don't look at console!
+console.log(melonCrystal);
+console.log(galaxyOpal);
+console.log(porkGem);
+console.log(cabbageGem);
 
 //Gem values updated to update function
 $(document).ready(function(){
@@ -82,7 +87,6 @@ function results (){
 
 			wins = wins + 1;
 			alert('Congratulations. You Won! Please play again!');
-
 			restart();
 
 			}			
