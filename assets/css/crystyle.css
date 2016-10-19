@@ -1,6 +1,23 @@
-#imagery1, #imagery2, #imagery3, #imagery4 {
+* {
 
-	width: 200px;
-	height: 200px;
+	box-sizing: border-box;
 
 }
+
+h1 {
+
+	text-align: center;
+	color: green;
+	font-size: 50px;
+	
+}
+
+body {
+
+
+	background-image: url('https://i.ytimg.com/vi/uBjbe3UBg6U/maxresdefault.jpg');
+	background-repeat: no-repeat;
+
+}
+
+

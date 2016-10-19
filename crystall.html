@@ -1,43 +1,86 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
+<html lang="en">
+<head>
 
-			<meta charset="UTF-8">
-				<title>Making A FORTUNE!</title>
-					<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-					<link rel="stylesheet" type="text/css" href="assets/css/crystyle.css">
+	<meta charset="UTF-8">
+		<title>Making A FORTUNE!</title>
+			<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+			<link rel="stylesheet" type="text/css" href="assets/css/crystyle.css">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		</head>
-		<body>
+</head>
+<body>
 
-			<div id="stats">
-
-				<p>Wins: 0</p>
-			<br>
-				<p>Losses: 0</p>
-			<br>	
-			
+		<div class="page-header">
+	  <h1>Welcome to the Crystal Game!!!</h1>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default">
+			  <div class="panel-heading">How to Play!!!!</div>
+				<ul class="list-group">
+				  <li class="list-group-item">To start, you are given a random number.</li>
+				  <li class="list-group-item">There are four crystals to select from below. Clicking on a crystal will add a specific amount of points to your total score.</li>
+				  <li class="list-group-item">In order to win the game; <bold>match</bold> your total score to a random number. You will lose the game if your total score <bold>surpasses</bold> the random number.</li>
+				  <li class="list-group-item">The value of each crystal is hidden from you until you click on the crystal of your choice.</li>
+				  <li class="list-group-item">The value of the crystals and random number will change after the completion each game.</li>
+				</ul>
 			</div>
-		
-				<p>Match this number: <span id="numberGen"></span></p>
-			<br>	
-				<p>Current Score: <span id="goalNumber">0</span></p>
-		
-			<div class="powerGem">
+		</div>
 
-				<img id="imagery1" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/cc9566b877fb24b579c30d4bdbaaa627.jpg">
+		<div class="well well-lg">
+		<div class="row">
+			<div class="col-md-6">
 
-				<img id="imagery2" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/galaxy-opal-640x533.jpg">
+				<h2>Value to Match: </h2><h3><span id="randomNumber" class="label label-warning"></span></h3>
 
-				<img id="imagery3" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/MeatStone_Taiwan.JPG">
+			</div>
 
-				<img id="imagery4" src="file:///C:/Users/GaraanSK/week-4-game/assets/images/eca81abed2a09fb1708c6c294a346a4a.jpg">
+			<div class="col-md-3">
 
-			</div>		
+					<p><h2>Wins: </h2><h3><span id="wins" class="label label-warning"></span></h3></p>
+						<!-- Your score -->
+				
+			</div>
+
+			<div class="col-md-3">
+					<!-- Wins/Losses -->
+					
+					<p><h2>Losses: </h2><h3><span id="losses" class="label label-warning"></span></h3></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<!-- Crystal buttons -->
+		<div class="col-md-6 col-md-offset-3 image-container">
+			<div type="button" class="btn btn-default" id="watermelon">
+				<img src="file:///C:/Users/GaraanSK/week-4-game/assets/images/cc9566b877fb24b579c30d4bdbaaa627.jpg" alt="Red Crystal" height=100px width=100px>
+			</div>
+			<div type= "button" class="btn btn-default" id="opal">
+				<img src="file:///C:/Users/GaraanSK/week-4-game/assets/images/galaxy-opal-640x533.jpg" alt="Blue Crystal" height=100px width=100px>
+			</div>
+			<div type="button" class="btn btn-default" id="porkBelly">
+				<img src="file:///C:/Users/GaraanSK/week-4-game/assets/images/MeatStone_Taiwan.JPG" alt="Yellow Crystal" height=100px width=100px>
+			</div>
+			<div type="button" class="btn btn-default" id="cabbage">
+				<img src="file:///C:/Users/GaraanSK/week-4-game/assets/images/eca81abed2a09fb1708c6c294a346a4a.jpg" alt="Green Crystal" height=100px width=100px>
+			</div>
+		</div>
+	</div>
+
+		<div class="well well-md">
+			<div class="row">
+				<div class="col-md-12">
+				<h3>Rounded Score: <span id="score" class="label label-warning"></span></h3>
+				</div>
+			</div>
+		</div>
+	<div>
 
 			<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 			<script type="text/javascript" src="assets/javascript/crygame.js"></script>
 	
-		</body>
-	</html>
+</body>
+</html>
