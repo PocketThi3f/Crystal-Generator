@@ -86,7 +86,7 @@ function results (){
 	if (score == winningNumber) {
 
 			wins = wins + 1;
-			alert('Congratulations. You Won! Please play again!');
+			alert("You the best at this game, Uno Mas!!!");
 			restart();
 
 			}			
@@ -94,7 +94,7 @@ function results (){
 		else if (score > winningNumber) {
 
 			losses = losses + 1;
-			alert('You lost. Please play again!');
+			alert("It's all right, I'm not the best guesser either...Try again.");
 			restart();
 
 			}
