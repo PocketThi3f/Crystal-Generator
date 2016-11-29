@@ -1,7 +1,4 @@
-# week-4-game
-hefty clicky interactive rpg
-or
-a simple crystal game.
+
 
 #Crystal Game
 
