@@ -4,6 +4,6 @@ The game's purpose for the user is to match the said amount of points given at t
 
 # Technologies used:
 
-HTML5/CSS3
-Javascript
+HTML5/CSS3,
+Javascript,
 jQuery
