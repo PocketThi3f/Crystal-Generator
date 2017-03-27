@@ -1,5 +1,9 @@
+# Crystal Game
 
+The game's purpose for the user is to match the said amount of points given at the beginning of the game with randomly generated values given to each crystal.
 
-#Crystal Game
+# Technologies used:
 
-Created this game to give users a small challenge by matching the randomized number with their score added by the buttons.
+HTML5/CSS3
+Javascript
+jQuery
